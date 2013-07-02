@@ -12,7 +12,7 @@ exports.lock = function(callback){
 			waits[k] = [callback];
 		else
 			waits[k].push(callback);
-		return;
+		return true;
 	}
 	locks[k] = true;
 
@@ -29,7 +29,8 @@ exports.lock = function(callback){
 
 	// Run and then.. release
 
-	return callback(release);
+	callback(release);
+	return false;
 
 };
 
