@@ -2,13 +2,13 @@ var
 	fnlock = require('../fnlock');
 
 function run(arg){
-	fnlock.lock(function(release){
+	fnlock.lock('run',function(release){
 		console.log("Enter "+arg);
 		setTimeout(release,1000);
 	});
 }
 function run2(arg){
-	fnlock.lock(function(release){
+	fnlock.lock('run2',function(release){
 		console.log("Enter2 "+arg);
 		setTimeout(release,1000);
 	});

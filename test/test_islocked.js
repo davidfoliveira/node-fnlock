@@ -1,5 +1,5 @@
 var
-	fnlock = require('../lib/fnlock'),
+	fnlock = require('../fnlock'),
 	lock = fnlock.lock;
 
 function run(arg){
